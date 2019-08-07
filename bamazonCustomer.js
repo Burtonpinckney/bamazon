@@ -52,16 +52,19 @@ function pickItem() {
             
             function (err, res) {
                 if (err) throw err;
-                console.log(res)
-                var newQuanity = res.stock_quanity - parseInt(answer.units)
-                    if (answer.units > res.stock_quanity) {
+                var dbq = res[0].stock_quanity
+                var totalPrice = answer.units * res[0].price
+            
+                var newQuanity = dbq - parseInt(answer.units)
+                    if (answer.units > res[0].stock_quanity) {
                      console.log("Insufficient quantity!")
                     } else {
                     connection.query("UPDATE products SET ? WHERE ?",
                         [{stock_quanity: newQuanity}, {item_id: newAnswer}]
     
                         )
-                        console.log(newQuanity);
+                        console.log("Remaining units: " + newQuanity);
+                        console.log("Total price: " + totalPrice);
                     }
                 })
             })
