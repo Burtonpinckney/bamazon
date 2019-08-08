@@ -1,1 +1,2 @@
-# bamazon
+The following program, known as Bamazon, is a server based application that is a virtual storefront that is designed to simulate an on-line store that will take in orders from customers and deplete stock from the store's inventory. It is run in the Terminal. To demonstrate see the attached screens shots. The first shows data base listing in mySQL. Note the stock quanity of the Football Helmets, 45.
+![Alt Text](./images/bamazon_stock_quanity.png)
