@@ -64,7 +64,7 @@ function pickItem() {
     
                         )
                         console.log("Remaining units: " + newQuanity);
-                        console.log("Total price: " + totalPrice);
+                        console.log("Total price: $" + totalPrice + ".00");
                     }
                 })
             })
